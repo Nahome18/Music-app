@@ -1,39 +1,31 @@
 import React, { useState, useEffect } from 'react';
-import Card from '../components/Card';
+
+import GenreCom from '../components/GenreCom';
 
 export default function GenrePage({onTrackSelect }) {
-    const [tracks, setTracks] = useState([]);
     const playlistId = '1282483245'; // Deezer playlist ID
+    const dictId = {
+        'rock': 13238299403,
+        'pop': 1282483245,
+        'rap': 1996494362,
+        'k-pop': 4096400722,
+        'afrobeats': 3153080842,
+        'dance': 706093725
+    }
+    const genres = ['rock','pop','rap','k-pop','afrobeats','dance']
 
-    useEffect(() => {
-        // Fetch playlist data from Deezer API
-        async function fetchPlaylist() {
-            try {
-                const response = await fetch(`/api/playlist/${playlistId}`);
-                const data = await response.json();
-                if (data.tracks && data.tracks.data) {
-                    setTracks(data.tracks.data);
-                } else {
-                    console.error('No tracks found in the playlist');
-                    console.log(data);
-                }
-            } catch (error) {
-                console.error('Error fetching playlist:', error);
-            }
-        }
 
-        fetchPlaylist();
-    }, []);
 
     return (
         <div className='genres-page'>
             <h1>Genre Page</h1>
-            <h2>Playlist Tracks</h2>
-            <div className='horizontal-card'>
-                {tracks.map((track, index) => (
-                    <Card key={index} result={track} onTrackSelect={onTrackSelect}/>
-                ))}
-            </div>
+            {genres.map((item => <GenreCom 
+                                    key={item}
+                                    name={item}
+                                    playlistId={dictId[item]}
+                                    onTrackSelect={onTrackSelect}
+                                />
+            ))}
         </div>
     );
 }
