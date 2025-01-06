@@ -153,6 +153,15 @@ i{
   width:40%;
 }
 
+.list-card{
+  display: flex;
+  align-items: center;
+  background-color: white;
+  justify-content: space-between;
+  width: 80%;
+  margin: 30px;
+}
+
 .play-con{
   background-color: red;
   height:100%;
