@@ -18,11 +18,10 @@ function Header({setResults}) {
             const response = await fetch(`https://83g2xxt654.execute-api.us-east-1.amazonaws.com/default/search?q=${query}`);
             const data = await response.json();
             setResults(data.data);
-            navigate(`/results`); 
-            
+            navigate("/results")
         } catch (error) {
             console.error('Error fetching data:', error);
-            alert('Failed to fetch search results');
+            alert('Failed to fetch search result');
         }
     };
 
