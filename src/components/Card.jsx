@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Card({index, result}){
+export default function Card({index, result, onTrackSelect}){
     return(
         <div key={index} className="track-card">
             <img src={result.album.cover} alt={result.title} className="album-cover" />
