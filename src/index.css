@@ -62,6 +62,22 @@ body {
   width:100%;
   max-height: 75vh;
 }
+.genres-page{
+  background-color: red;
+  width:100%;
+}
+.favorites-page{
+  background-color: yellow;
+  width:100%;
+}
+.home-page{
+  background-color: rgb(130, 87, 170);
+  width:100%;
+}
+.playlists-page{
+  background-color: brown;
+  width:100%;
+}
 
 .track-list {
   display: grid;

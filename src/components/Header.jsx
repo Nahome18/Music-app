@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
+import { NavLink, useNavigate } from "react-router-dom";
+
 function checkEnter(e){
     
 }
@@ -8,22 +10,28 @@ function checkEnter(e){
 function Header({setResults}) {
     const [query, setQuery] = useState('');
 
-   
-    
+    const navigate = useNavigate();
+
     const handleSearch = async () => {
 
         try {
-            const response = await axios.get(`https://api.deezer.com/search?q=${query}`);
+            // const response = await axios.get(`https://api.deezer.com/search?q=${query}`);
+            const response = await axios.get(`/api/search?q=${query}`);
             setResults(response.data.data);
+            navigate(`/results`); 
+            
         } catch (error) {
             console.error('Error fetching data:', error);
             alert('Failed to fetch search results');
         }
     };
+
+    const renderHomePage = () => { navigate("/home"); };
+    
     
     return (
         <header className="header">
-            <div className="logo">Deezer</div>
+            <div className="logo" onClick={renderHomePage}>Deezer</div>
             <div className="search-container">
                 <input 
                     type="text" 
