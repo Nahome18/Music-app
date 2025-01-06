@@ -8,6 +8,7 @@ function PreviewPage({ results, onTrackSelect }) {
                 <div className="track-list">
                     {results.map((result, index) => (
                         <Card key={index}
+                            onTrackSelect={onTrackSelect}
                             result={result}
                             onTrackSelect={onTrackSelect}
                         />

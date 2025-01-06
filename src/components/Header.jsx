@@ -15,7 +15,7 @@ function Header({setResults}) {
     const handleSearch = async () => {
 
         try {
-            const response = await axios.get(`/api/search?q=${query}`);
+            const response = await fetch(`/api/search?q=${query}`);
             const data = await response.json();
             setResults(data.data);
             navigate("/results")
