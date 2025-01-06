@@ -95,6 +95,14 @@ body {
   text-align: center;
 }
 
+.horizontal-card{
+  background-color: white;
+  width:100%;
+  display: flex;
+  gap: 5px;
+}
+
+
 .play-icon{
   display: flex;
   text-align: center;
