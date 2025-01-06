@@ -1,11 +1,15 @@
 import React from 'react'
 import Card from '../components/Card';
 import { useState, useEffect } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
 
 export default function GenreCom({name, playlistId,onTrackSelect}){
     const [tracks, setTracks] = useState([]);
+
+   
+
     useEffect(() => {
-        // Fetch playlist data from Deezer API
         async function fetchPlaylist() {
             try {
                 const response = await fetch(`/api/playlist/${playlistId}`);
@@ -24,14 +28,19 @@ export default function GenreCom({name, playlistId,onTrackSelect}){
         fetchPlaylist();
     }, []);
     return (
-            <div className='container'>
+            <div className='container swiper'>
                 <h2 className='genre-name'>{name}</h2>
-                
-                <div className='horizontal-card'>
+                <Swiper className='horizontal-card'
+                spaceBetween={30}
+                slidesPerView={6}
+                loop
+                >
                     {tracks.map((track, index) => (
-                    <Card key={index} result={track} onTrackSelect={onTrackSelect}/>
+                    <SwiperSlide key={index}>
+                    <Card result={track} onTrackSelect={onTrackSelect}/>
+                    </SwiperSlide>
                 ))}
-                </div>
+                </Swiper>
             </div>
 
     )
