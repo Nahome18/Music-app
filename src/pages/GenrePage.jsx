@@ -1,8 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import Swiper from 'swiper/bundle';
+import 'swiper/css/bundle';
 
 import GenreCom from '../components/GenreCom';
 
 export default function GenrePage({onTrackSelect }) {
+
+    
     const playlistId = '1282483245'; // Deezer playlist ID
     const dictId = {
         'rock': 13238299403,

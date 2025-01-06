@@ -102,7 +102,7 @@ body {
   background-color: white;
   width:100%;
   display: flex;
-  gap: 5px;
+  gap: 1px;
 }
 
 
@@ -186,6 +186,10 @@ i{
 .genre-name{
   color: white;
   margin: 5px;
+  font-size: 30px;
+}
+
+.swiper-button-prev .swiper-button-next{
   font-size: 30px;
 }
 
