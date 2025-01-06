@@ -4,6 +4,7 @@ import '../index.css'
 
 export default function HomePage(){
     const [songs, setSongs] = useState([])
+    const [count, setCount] = useState(0)
 
     useEffect(() => {
         async function getData(){
@@ -20,13 +21,13 @@ export default function HomePage(){
         }
         getData();
      }, []);
-    const [count, setCount] = 0
+    
 
     return(
         <div className='home-page'>
             <h1>Popular hits</h1>
-            {songs.map((item =>  <ListCard 
-                    num={count}
+            {songs.map((item, index) =>  (<ListCard 
+                    num={index+1}
                     key={item.id}
                     image={item.album.cover_small}
                     title={item.title_short}

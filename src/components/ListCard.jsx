@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function ListCard({num, image, title, artist, album, duration, setCount}){
-    setCount(num+1)
     return (
         <div className='list-card'>
             <span>{num}</span>
