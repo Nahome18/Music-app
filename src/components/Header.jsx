@@ -1,11 +1,8 @@
 import React, { useState } from 'react';
-import axios from 'axios';
 
-import { NavLink, useNavigate } from "react-router-dom";
 
-function checkEnter(e){
-    
-}
+import { useNavigate } from "react-router-dom";
+
 
 function Header({setResults}) {
     const [query, setQuery] = useState('');

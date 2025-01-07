@@ -28,7 +28,7 @@ function App() {
                     <Route path="/home" element={<HomePage />} />
                     <Route path="/genres" element={<GenrePage onTrackSelect={handleTrackSelect} />}/>
                     <Route path="/results" element={<PreviewPage results={results} onTrackSelect={handleTrackSelect} /> } />
-                    <Route path="/favorites" element={<FavoritesPage />}/>
+                    <Route path="/favorites" element={<FavoritesPage track={234567}/>}/>
                     <Route path="/playlists" element={<PlaylistPage />}/>
                 </Routes>
 
