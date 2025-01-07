@@ -30,7 +30,7 @@ function Header({setResults}) {
     
     return (
         <header className="header">
-            <div className="logo" onClick={renderHomePage}>Deezer</div>
+            <div className="logo" onClick={renderHomePage}><span>B</span>eat<span>B</span>lend</div>
             <div className="search-container">
                 <input 
                     type="text" 

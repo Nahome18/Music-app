@@ -19,7 +19,7 @@ function App() {
   };
 
     return (
-        <div>
+        <div className="return-container">
             <Header setResults={setResults} />
             <main>
                 <Navbar/>
@@ -33,7 +33,7 @@ function App() {
                 </Routes>
 
             </main>
-            <Tracker track={currentTrack} />
+            <Tracker className="track" track={currentTrack} />
         </div>
     );
 }
