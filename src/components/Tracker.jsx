@@ -7,7 +7,7 @@ function Tracker({ track }) {
     const [currentTime, setCurrentTime] = useState(0); // Track the current time
     const [duration, setDuration] = useState(0); // Track the track's duration
     const [progress, setProgress] = useState(0); // Update seeker bar progress
-    const [volume, setVolume] = useState(0.5);
+    const [volume, setVolume] = useState(0.1);
 
     const togglePlayPause = () => {
         if (currentSound) {
@@ -57,6 +57,7 @@ function Tracker({ track }) {
             sound.play();
             setCurrentSound(sound);
             setPlaying(true);
+            setVolume(0.1);
         }
         
         return () => {
@@ -109,7 +110,9 @@ function Tracker({ track }) {
     return (
         <section className="tracker">
             <div className="current-track">
-                <img src={album} alt="Album cover" className="album-cover" />
+
+                
+                {!album? <i class="fi fi-ss-music-alt"></i> : <img src={album} alt="Album cover" className="album-cover" />}
                 <div>
                     <h3 className="track-title">{title}</h3>
                     <p className="artist-name">{artist}</p>

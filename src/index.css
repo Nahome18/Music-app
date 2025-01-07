@@ -30,6 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
+  width: 100vw;
 }
 
 .favorites-page{
@@ -48,6 +49,7 @@ body {
 }
 
 .container{
+  width: 100vw;
 }
 
 ::-webkit-scrollbar {
@@ -150,6 +152,7 @@ body {
   background-color:#121212;
   display: flex;
   gap: 1px;
+  width: 100%;
 }
 
 

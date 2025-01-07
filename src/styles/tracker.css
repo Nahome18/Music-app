@@ -10,7 +10,14 @@
     padding-left:15px;
     z-index: 1000;
   }
-  
+  .current-track i{
+    display: flex;
+    margin-right: 30px;
+    font-size: 50px;
+    align-self: center;
+
+
+  }
   .seek-bar{
     display:flex;
     padding-bottom: 5px;
@@ -70,7 +77,7 @@
     margin-right:20px;
   }
   
-  .current-track h3,.current-track p{
+  .current-track h3,.current-track p, .current-track i{
     background: linear-gradient(to right, #FF5500, #f87939,#ff945e);
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text; 
