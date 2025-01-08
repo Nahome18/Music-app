@@ -2,17 +2,17 @@ import React from 'react'
 
 export default function Card({index, result, onTrackSelect, setFavList}){
 
-    function handleFavClick(){
-        const newTrack = result
+    function handleFavClick() {
+        const newTrack = result;
         setFavList((prev) => {
-            if (prev.includes(newTrack)){
-                return [...prev].filter(item => item != newTrack)
+            if (prev.some((item) => item.id === newTrack.id)) {
+                // Remove track if it already exists
+                return prev.filter((item) => item.id !== newTrack.id);
+            } else {
+                // Add track if it doesn't exist
+                return [...prev, newTrack];
             }
-            else{
-                return [...prev, newTrack]
-            }
-            
-        }) 
+        });
     }
 
     return(
