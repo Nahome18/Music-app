@@ -83,6 +83,7 @@ body {
   margin-top:30px;
   border-top: 1px solid #282828;
   box-shadow: 1px 2px 1px #282828;
+  width: 100vw;
 }
 
 .track-list {
@@ -229,13 +230,17 @@ main {
 }
 
 
-.list-card{
-  display: flex;
-  align-items: center;
-  background-color: white;
-  justify-content: space-between;
-  width: 80%;
-  margin: 30px;
+.list-card {
+  display: grid;
+  grid-template-columns: 50px 1fr 1.5fr 2fr 1.3fr auto; /* Defines columns for image and text */
+  align-items: center; /* Vertically aligns items */
+  margin: 0 30px;
+  border-bottom: 1px solid #ccc; /* Optional: Divider between cards */
+}
+.list-card img {
+  width: 50px; /* Fixed width for consistent alignment */
+  height: 50px; /* Fixed height */
+  object-fit: cover; /* Ensures images maintain aspect ratio */
 }
 
 .play-con{
