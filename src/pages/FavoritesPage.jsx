@@ -3,9 +3,13 @@ import '../index.css'
 
 export default function FavoritesPage({favList}){
     
+    
 
     return(
-        <h1 className="favorites-page">Favorites Page</h1>
-
+        <div className='fav-page'>
+            <h1 className="favorites-page">Favorites Page</h1>
+            {favList.map(item => <h2>{item}</h2>)}
+        </div>
+        
     )
 };
