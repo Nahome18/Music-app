@@ -4,7 +4,7 @@ import 'swiper/css/bundle';
 
 import GenreCom from '../components/GenreCom';
 
-export default function GenrePage({onTrackSelect }) {
+export default function GenrePage({onTrackSelect,}) {
     const dictId = {
         'Rock': 13238299403,
         'Pop': 1282483245,

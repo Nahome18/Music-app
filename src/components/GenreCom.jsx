@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-export default function GenreCom({name, playlistId,onTrackSelect}){
+export default function GenreCom({name, playlistId,onTrackSelect,setFa}){
     const [tracks, setTracks] = useState([]);
 
    
@@ -32,7 +32,7 @@ export default function GenreCom({name, playlistId,onTrackSelect}){
                 <h2 className='genre-name'>{name}</h2>
                 <Swiper className='horizontal-card'
                 spaceBetween={30}
-                slidesPerView={6}
+                slidesPerView={"auto"}
                 >
                     {tracks.map((track, index) => (
                     <SwiperSlide key={index}>
