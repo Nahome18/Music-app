@@ -3,7 +3,7 @@ import React from 'react'
 export default function Card({index, result, onTrackSelect, setFavList}){
 
     function handleFavClick(){
-        const newTrack = result.title
+        const newTrack = result
         setFavList((prev) => {
             if (prev.includes(newTrack)){
                 return [...prev].filter(item => item != newTrack)

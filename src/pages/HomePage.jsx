@@ -4,7 +4,7 @@ import '../index.css'
 
 export default function HomePage(){
     const [songs, setSongs] = useState([])
-    const [count, setCount] = useState(0)
+
 
     useEffect(() => {
         async function getData(){
@@ -34,7 +34,7 @@ export default function HomePage(){
                     artist={item.artist.name}
                     album={item.album.title}
                     duration={item.duration}
-                    setCount={setCount}
+
                         />
                     ) 
                         )}
