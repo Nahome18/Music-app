@@ -41,6 +41,7 @@ function Tracker({ track }) {
                 currentSound.stop();
             }
             const sound = new Howl({
+
                 src: [track.preview],
                 html5: true,
                 onplay: () => {
@@ -112,7 +113,7 @@ function Tracker({ track }) {
             <div className="current-track">
 
                 
-                {!album? <i class="fi fi-ss-music-alt"></i> : <img src={album} alt="Album cover" className="album-cover" />}
+                {!album? <i className="fi fi-ss-music-alt"></i> : <img src={album} alt="Album cover" className="album-cover" />}
                 <div>
                     <h3 className="track-title">{title}</h3>
                     <p className="artist-name">{artist}</p>
@@ -133,7 +134,7 @@ function Tracker({ track }) {
                         id="seekerBar"
                         min="0"
                         max="100"
-                        value={progress}
+                        value={progress?progress:0}
                         step="1"
                         onChange={handleSeekChange}
                     />    

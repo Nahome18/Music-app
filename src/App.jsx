@@ -21,11 +21,9 @@ function App() {
       setCurrentTrack(track);
   };
 
-
 // storing updated list locally
 useEffect(() => {
     localStorage.setItem('fav', JSON.stringify(favList));
-    console.log(favList);
 }, [favList]);
 
 
@@ -36,10 +34,10 @@ useEffect(() => {
                 <Navbar/>
                 <Routes>
                     <Route index element={<HomePage />} />
-                    <Route path="/home" element={<HomePage />} />
+                    <Route path="/home" element={<HomePage onTrackSelect={handleTrackSelect} />} />
                     <Route path="/genres" element={<GenrePage onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/>}/>
                     <Route path="/results" element={<PreviewPage results={results} onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/> } />
-                    <Route path="/favorites" element={<FavoritesPage favList={favList}/>}/>
+                    <Route path="/favorites" element={<FavoritesPage favList={favList} onTrackSelect={handleTrackSelect}/>}/>
                     <Route path="/playlists" element={<PlaylistPage />}/>
                 </Routes>
 

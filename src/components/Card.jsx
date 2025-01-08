@@ -7,10 +7,8 @@ export default function Card({ index, result, onTrackSelect, setFavList, favList
         const newTrack = result;
         setFavList((prev) => {
             if (prev.some((item) => item.id === newTrack.id)) {
-                // Remove track if it already exists
                 return prev.filter((item) => item.id !== newTrack.id);
             } else {
-                // Add track if it doesn't exist
                 return [...prev, newTrack];
             }
         });
@@ -31,7 +29,7 @@ export default function Card({ index, result, onTrackSelect, setFavList, favList
             <button className="fav-button" onClick={handleFavClick}>
                 <i
                     className="fi fi-ss-star"
-                    style={{ color: isFavorited ? "gold" : "gray" }} // Change color dynamically
+                    style={{ color: isFavorited ? "gold" : "gray" }}
                 ></i>
             </button>
         </div>
