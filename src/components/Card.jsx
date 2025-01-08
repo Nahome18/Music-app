@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 
-export default function Card({index, result, onTrackSelect, setFavList}){
+export default function Card({ index, result, onTrackSelect, setFavList, favList }) {
+    const isFavorited = favList.some((item) => item.id === result.id); // Check if track is a favorite
 
     function handleFavClick() {
         const newTrack = result;
@@ -14,23 +15,25 @@ export default function Card({index, result, onTrackSelect, setFavList}){
             }
         });
     }
-    
 
-    return(
-        <div>
-            <button onClick={handleFavClick}>Add Fav</button>
-        
-        <div key={index} className="track-card"> 
-        
-            <img src={result.album.cover_medium} alt={result.title} className="album-cover" />
+    return (
+        <div key={index} className="track-card">
+            <img
+                src={result.album.cover_medium}
+                alt={result.title}
+                className="album-cover"
+            />
             <h3 className="track-title">{result.title}</h3>
             <p className="artist-name">{result.artist.name}</p>
             <div className="play-icon" onClick={() => onTrackSelect(result)}>
                 <i className="fi fi-rr-play-circle"></i>
             </div>
-            
+            <button className="fav-button" onClick={handleFavClick}>
+                <i
+                    className="fi fi-ss-star"
+                    style={{ color: isFavorited ? "gold" : "gray" }} // Change color dynamically
+                ></i>
+            </button>
         </div>
-        </div>
-    )
+    );
 }
-

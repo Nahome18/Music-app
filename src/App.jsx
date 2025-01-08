@@ -37,8 +37,8 @@ useEffect(() => {
                 <Routes>
                     <Route index element={<HomePage />} />
                     <Route path="/home" element={<HomePage />} />
-                    <Route path="/genres" element={<GenrePage onTrackSelect={handleTrackSelect} setFavList={setFavList}/>}/>
-                    <Route path="/results" element={<PreviewPage results={results} onTrackSelect={handleTrackSelect} setFavList={setFavList}/> } />
+                    <Route path="/genres" element={<GenrePage onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/>}/>
+                    <Route path="/results" element={<PreviewPage results={results} onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/> } />
                     <Route path="/favorites" element={<FavoritesPage favList={favList}/>}/>
                     <Route path="/playlists" element={<PlaylistPage />}/>
                 </Routes>

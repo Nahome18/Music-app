@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 
-export default function GenreCom({name, playlistId,onTrackSelect,setFa}){
+export default function GenreCom({name, playlistId,onTrackSelect,setFavList,favList}){
     const [tracks, setTracks] = useState([]);
 
    
@@ -36,7 +36,7 @@ export default function GenreCom({name, playlistId,onTrackSelect,setFa}){
                 >
                     {tracks.map((track, index) => (
                     <SwiperSlide key={index}>
-                    <Card result={track} onTrackSelect={onTrackSelect}/>
+                    <Card result={track} onTrackSelect={onTrackSelect} setFavList={setFavList} favList={favList}/>
                     </SwiperSlide>
                 ))}
                 </Swiper>

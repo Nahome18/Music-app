@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Card from './Card'
 
-function PreviewPage({ results, onTrackSelect, setFavList }) {
+function PreviewPage({ results, onTrackSelect, setFavList,favList }) {
     return (
         <div className="preview-page">
             {results && results.length > 0 ? (
@@ -12,6 +12,7 @@ function PreviewPage({ results, onTrackSelect, setFavList }) {
                             result={result}
                             onTrackSelect={onTrackSelect}
                             setFavList={setFavList}
+                            favList={favList}
                         />
                     ))}
                 </div>

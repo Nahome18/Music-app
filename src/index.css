@@ -100,7 +100,6 @@ body {
     color:#FF5500;
     border: 0px;
     border-radius: 8px;
-    overflow: hidden;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -138,6 +137,25 @@ body {
 .play-icon i {
   font-size: 48px; /* Large play icon */
   color:#FF5500;
+}
+
+.fav-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding:5px;
+  z-index:10;
+  position: absolute;
+  top:0;
+  left:0;
+  background:transparent;
+  border: 0px;
+  z-index:10000
+}
+
+.fav-button i{
+  color:#282828;
 }
 
 .track-card:hover .play-icon {
