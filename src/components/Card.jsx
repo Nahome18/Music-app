@@ -14,6 +14,7 @@ export default function Card({index, result, onTrackSelect, setFavList}){
             }
         });
     }
+    
 
     return(
         <div>
