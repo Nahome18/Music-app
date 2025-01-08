@@ -31,8 +31,8 @@ export default function GenreCom({name, playlistId,onTrackSelect,setFa}){
             <div className='container'>
                 <h2 className='genre-name'>{name}</h2>
                 <Swiper className='horizontal-card'
-                spaceBetween={30}
-                slidesPerView={"auto"}
+                spaceBetween={0}
+                slidesPerView={6}
                 >
                     {tracks.map((track, index) => (
                     <SwiperSlide key={index}>
