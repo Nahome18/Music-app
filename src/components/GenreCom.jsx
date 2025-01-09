@@ -15,7 +15,7 @@ export default function GenreCom({name, playlistId,onTrackSelect,setFavList,favL
                 try{
                     let apiData = ''
                     if (data===''){
-                        const response = await fetch(`/api/playlist/${playlistId}`);
+                        const response = await fetch(`https://83g2xxt654.execute-api.us-east-1.amazonaws.com/default/playlist?playlistId=${playlistId}`);
                         apiData = await response.json();
                         sessionStorage.setItem(`${name}-genre`,JSON.stringify(apiData))
                         setData(apiData)

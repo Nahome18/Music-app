@@ -26,7 +26,7 @@
     letter-spacing: 0.005em;
     word-spacing: 0.05em;
     font-style: italic;
-    cursor:default
+    cursor:default;
   }
 
   .list-card span{
@@ -106,4 +106,39 @@
     opacity: 0; /* Hidden by default */
     transition: opacity 0.3s ease; /* Smooth fade-in effect */
     cursor: pointer;
+  }
+
+  @media (max-width: 480px) {
+    .list-card{
+      gap:15px;
+      overflow: hidden;
+    }
+    
+    .list-card h3{
+      font-size: 0.8rem;
+      align-items: center;
+      justify-content: start;
+      max-width: 100%;
+      text-wrap: nowrap;
+    }
+    h3:nth-of-type(n+3){
+      display: none;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .list-card{
+      gap:15px;
+    }
+    
+    .list-card h3{
+      font-size: 0.8rem;
+      align-items: center;
+      justify-content: start;
+      max-width: 100%;
+      text-wrap: nowrap;
+    }
+    h3:nth-of-type(n+2){
+      display: none;
+    }
   }
