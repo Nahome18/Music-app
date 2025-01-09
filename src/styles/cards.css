@@ -1,12 +1,19 @@
 .genres-page h1{
-    color:#FF5500;
+  color: white;
     letter-spacing: 0.025em;
     line-height: 1.5em;
+    text-align: center;
+    font-variant: small-caps;
+    font-size: 30px;
+  }
+
+  .genres-page h1::first-letter{
+    color:#FF5500;
+    font-size: 40px;
   }
   
   .genre-name::first-letter{
     color: #FF5500;
-    font-size: 40px;
   }
   
   .genre-divider{
@@ -28,7 +35,6 @@
       width: 200px; /* Adjust card width */
       height: 300px; /* Adjust card height */
       background-color:#282828;
-      color:#FF5500;
       border: 0px;
       border-radius: 8px;
       text-align: center;
@@ -38,6 +44,22 @@
       transition: transform 0.3s ease;
       padding-top: 45px;
       padding-bottom: 45px;
+      
+  }
+
+  .track-card h3{
+    font-size: 17px;
+    line-height: 2.5vh;
+    font-weight: 600;
+    color: #d44700;
+  }
+
+  .track-card p{
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1vh;
+    font-style: italic;
+    color: #a83801;
   }
   
   .track-card:hover {

@@ -81,7 +81,12 @@
     background: linear-gradient(to right, #FF5500, #f87939,#ff945e);
     -webkit-text-fill-color: transparent; 
     -webkit-background-clip: text; 
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 2.5vh;
   }
+
 
   .play-con{
     background-color: transparent;

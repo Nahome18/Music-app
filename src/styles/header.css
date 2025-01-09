@@ -22,7 +22,9 @@
   }
   
   .logo span{
+    font-size: 35px;
     color:#FF5500;
+    font-variant: small-caps;
   }
   
   .search-container {
