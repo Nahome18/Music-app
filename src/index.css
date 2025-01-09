@@ -38,6 +38,7 @@ body {
   width:100%;
   overflow-y: auto;
   min-height: 80vh;
+  min-width: 1000px;
 }
 
 .playlists-page{
