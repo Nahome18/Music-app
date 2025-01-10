@@ -17,6 +17,7 @@ function App() {
     const [currentTrack, setCurrentTrack] = useState(null);
     const [favList, setFavList] = useLocalStorage('fav', [])
     const [query, setQuery] = useState('');
+    const [currentQuery,setCurrentQuery] = useState('');
 
     const handleTrackSelect = (track) => {
       setCurrentTrack(track);
@@ -30,14 +31,14 @@ useEffect(() => {
 
     return (
         <div className="return-container">
-            <Header setResults={setResults} setQuery={setQuery} query={query} />
+            <Header setResults={setResults} setQuery={setQuery} query={query} currentQuery={currentQuery} setCurrentQuery={setCurrentQuery} />
             <main>
                 <Navbar/>
                 <Routes>
                     <Route index element={<HomePage onTrackSelect={handleTrackSelect} />} />
                     <Route path="/home" element={<HomePage onTrackSelect={handleTrackSelect} />} />
                     <Route path="/genres" element={<GenrePage onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/>}/>
-                    <Route path={`/results/${query}`} element={<PreviewPage results={results} onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/> } />
+                    <Route path={`/results/${currentQuery}`} element={<PreviewPage results={results} onTrackSelect={handleTrackSelect} setFavList={setFavList} favList={favList}/> } />
                     <Route path="/favorites" element={<FavoritesPage favList={favList} onTrackSelect={handleTrackSelect}/>}/>
                     <Route path="/playlists" element={<PlaylistPage />}/>
                     <Route path="*" element={<ErrorPage />} />
