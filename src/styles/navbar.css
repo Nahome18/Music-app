@@ -1,7 +1,7 @@
 .navbar {
     background-color: #121212; 
     flex-direction: column;
-    height: auto;
+    height: 100vh;
     display: flex;
   }
   
