@@ -29,6 +29,7 @@ function App() {
 useEffect(() => {
     localStorage.setItem('fav', JSON.stringify(favList));
 }, [favList]);
+
 useEffect(() => {
     if (currentQuery){navigate(`/results?search=${currentQuery}`)}
     
