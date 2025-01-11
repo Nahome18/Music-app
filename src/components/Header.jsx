@@ -14,7 +14,6 @@ function Header({setResults,setQuery,query,currentQuery,setCurrentQuery}) {
             const data = await response.json();
             setResults(data.data);
             setCurrentQuery(query);
-            navigate(`/results/${currentQuery}`)
         } catch (error) {
             console.error('Error fetching data:', error);
             alert('Failed to fetch search result');
